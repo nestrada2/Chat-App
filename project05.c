@@ -242,15 +242,18 @@ void pollLoop(struct pollfd fds[], char buffer[], int udpSocket, int tcpSocket)
 
                         int userFound = 0;
                         struct user tempUser;
-                        for (int i = 0; i < num_users; i++) {
-                            if (strcmp(username, users[i].name)) {
+                        for (int i = 0; i < num_users; i++)
+                         {
+                            if (strcmp(username, users[i].name))
+                             {
                                 userFound = 1;
                                 tempUser = users[i];
                                 break;
                             }
                         }
 
-                        if (!userFound) {
+                        if (!userFound)
+                         {
                             continue;
                         }
 
